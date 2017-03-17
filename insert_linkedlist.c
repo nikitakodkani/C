@@ -28,21 +28,21 @@ typedef struct Node
 
 Node* insert(Node *head,int data)
 {
-    struct Node* current;
-    struct Node* new_node =(struct Node*) malloc(sizeof(struct Node));
-    new_node->data  = data;
-    new_node->next = NULL;
-    if (head == NULL) {
-        head = new_node;
-    } else {
-        current = head;
-        while (current->next!=NULL) {
-            current = current->next;
-        }
-        current->next = new_node;
-    }
-    return head;
-    //Complete this function
+    	struct Node* current;
+    	struct Node* new_node =(struct Node*) malloc(sizeof(struct Node));
+    	new_node->data  = data;
+    	new_node->next = NULL;
+    	if (head == NULL) {
+        	head = new_node;
+    	} else {
+        	current = head;
+        	while (current->next!=NULL) {
+            	current = current->next;
+        	}
+        	current->next = new_node;
+    	}
+    	return head;
+    	//Complete this function
 }
 
 void display(Node *head)
@@ -58,12 +58,11 @@ void display(Node *head)
 int main()
 {
 	int T,data;
-    scanf("%d",&T);
-    Node *head=NULL;	
-    while(T-->0){
-        scanf("%d",&data);
-        head=insert(head,data);
-    }
-  display(head);
-		
+    	scanf("%d",&T);
+    	Node *head=NULL;	
+    	while(T-->0){
+        	scanf("%d",&data);
+        	head=insert(head,data);
+    	}
+  	display(head);
 }
